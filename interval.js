@@ -1,7 +1,6 @@
 var redis = require("redis"),
     client = redis.createClient();
 
-//var delay = 5 * 60 * 1000; // 5 minutes
 var delay;
 
 if (process.argv[2]) {
