@@ -28,7 +28,7 @@ Which in turn will host a test server(localhost only) on port 1234.
     
 #Interval
 
-Interval is a script which for now retrieves URLs which need to be measured for response time to the worker-queue at the specified interval.
+Interval is a script which for now retrieves URLs which(you added via redis-cli) are need to be measured for response time and adds them to the worker-queue(makes it possible for workers to do the desired work) at the specified interval. 
 You start it via
     node interval.js
 
@@ -40,7 +40,7 @@ It gets executed by:
 
 #TODOS
 
-Like I mentoined before this software is still in alpha(pre). For now I would strongely encourage against using it against domains on the internet(you don't control) because there isn't any throttling yet. Below I like to keep track of a list of todos:
+Like I mentioned before this software is still in alpha(pre). For now I would strongely encourage against using it against domains on the internet(you don't control) because there isn't any throttling yet. Below I like to keep track of a list of todos:
 
 - Documentation is not up to the snuff.
 - Should have tests.
