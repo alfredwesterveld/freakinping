@@ -14,7 +14,7 @@ function Url(concurrency) {
 
 var get = function(url) {
     var begin = new Date().getTime();
-    
+
      client.get(url)
     .addListener('error', function (err) {
         console.log('received error from urlfetch ' + url + ' at ' + new Date().toLocaleTimeString());
@@ -23,7 +23,7 @@ var get = function(url) {
         this.connected--;
         var end = new Date().getTime();
         var timeSpent = end - begin;
-        console.log('[url: ' + url + '] [Time spent: ' + timeSpent 
+        console.log('[url: ' + url + '] [Time spent: ' + timeSpent
             + 'ms] [started: ] ' + new Date(begin).toLocaleTimeString()
             + '[ended: ' + new Date().toLocaleTimeString() + ']');
     }).send();
