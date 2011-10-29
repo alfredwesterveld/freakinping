@@ -1,7 +1,7 @@
 var ping = require('./ping').create(),
     redis = require("redis"),
     client = redis.createClient();
-    
+
 var getJob = function() {
     client.brpop('urls-queue', 0, function(err, reply) {
         if (err) {
